@@ -3,8 +3,8 @@
 <button (click)="changeMyColor()">Change My Color Please!</button>
 
 <ul *ngIf="pokemons">
-  <li *ngFor="let pokemon of pokemons">
-    <img [src]="pokemon.photo">
-    <p>{{ pokemon.name }}</p>
+  <li *ngFor="let pokemon of pokemons" routerLink="/details/{{pokemon.name}}">    
+      <img [src]="pokemon.photo">
+      <p>{{ pokemon.name }}</p>
   </li>
 </ul>
