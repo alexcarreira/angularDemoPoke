@@ -1,0 +1,10 @@
+<h1 [class.gray]="h1Style">Pokemons</h1>
+
+<button (click)="changeMyColor()">Change My Color Please!</button>
+
+<ul *ngIf="pokemons">
+  <li *ngFor="let pokemon of pokemons">
+    <img [src]="pokemon.photo">
+    <p>{{ pokemon.name }}</p>
+  </li>
+</ul>

@@ -34,3 +34,6 @@
   - ng build
   - ng build --prod
   - http server -o
+  
+  ### Run
+  - ng serve
