@@ -24,12 +24,12 @@
   - Adicionar chamada ao data service pelo home page
   - Copiar html e scss para home component
   
-  ## Forms:
+  ### Forms:
   
   - Importar ReactiveFormsModule from @angular/forms no app.module
   - Copiar html, scss e ts para contact.component
   
-  ## Build:
+  ### Build:
   
   - ng build
   - ng build --prod
