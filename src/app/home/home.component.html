@@ -1,10 +1,22 @@
 <h1 [class.gray]="h1Style">Pokemons</h1>
 
-<button (click)="changeMyColor()">Change My Color Please!</button>
+<button class="bubbly-button" [ngClass]="clicked ? 'animate' : ''" (click)="changeMyColor()">Change My Color Please!</button>
 
-<ul *ngIf="pokemons">
-  <li *ngFor="let pokemon of pokemons">
-    <img [src]="pokemon.photo">
-    <p>{{ pokemon.name }}</p>
-  </li>
-</ul>
+<div class="list">
+  <div class="list-column">
+    <ul *ngIf="pokemons">
+      <li class="bubbly-button" [ngClass]="pokemon.clicked ? 'animate' : ''" (click)="clickItem(pokemon)" *ngFor="let pokemon of pokemons">
+        <img [src]="pokemon.photo">
+        <p>{{ pokemon.name }}</p>
+      </li>
+    </ul>
+  </div>
+  <div class="list-column">
+    <ul *ngIf="items">
+      <li class="bubbly-button" [ngClass]="item.clicked ? 'animate' : ''" (click)="clickItem(item)" *ngFor="let item of items">
+        <img [src]="item.photo">
+        <p>{{ item.name }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
