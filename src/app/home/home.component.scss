@@ -2,23 +2,12 @@
     color: gray;
 }
 
-.list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.list-column {
-    width: 45%;
-}
-
 ul {
     list-style-type: none;
     margin: 0;padding: 0;
 
     li {
-        background: rgba(119,0,255,0.5);
+        background: rgba(255, 177, 0, 0.22);
         padding: 2em;
         border-radius: 70px;
         margin-bottom: 7px;
@@ -29,14 +18,17 @@ ul {
         transition: all .2s ease-in-out;
 
         &:hover {
-            background: rgba(119,0,255,0.8);
+            background: rgba(255, 141, 0, 0.6);
             transform: scale(1.03);
         }
 
         p {
+            font-size: 1.3em;
             font-weight: bold;
             margin-left: 20px;
             text-transform: uppercase;
+            align-self: center;
+            margin-bottom: 0;
         }
 
         img {
@@ -55,7 +47,7 @@ $baby-blue: #f8faff;
 
 .bubbly-button{
   display: inline-block;
-  font-size: 1em;
+  font-size: 0.7em;
   padding: 1em 2em;
   margin-bottom: 50px;
   -webkit-appearance: none;

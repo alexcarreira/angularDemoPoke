@@ -2,8 +2,8 @@
 
 <button class="bubbly-button" [ngClass]="clicked ? 'animate' : ''" (click)="changeMyColor()">Change My Color Please!</button>
 
-<div class="list">
-  <div class="list-column">
+<div class="row">
+  <div class="col-md-6">
     <ul *ngIf="pokemons">
       <li class="bubbly-button" [ngClass]="pokemon.clicked ? 'animate' : ''" (click)="clickItem(pokemon)"
        *ngFor="let pokemon of pokemons" routerLink="/details/{{pokemon.name}}">
@@ -12,7 +12,7 @@
       </li>
     </ul>
   </div>
-  <div class="list-column">
+  <div class="col-md-6">
     <ul *ngIf="items">
       <li class="bubbly-button" [ngClass]="item.clicked ? 'animate' : ''" (click)="clickItem(item)" *ngFor="let item of items">
         <img [src]="item.photo">
