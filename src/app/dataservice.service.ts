@@ -16,6 +16,10 @@ export class DataserviceService {
     return this.http.get(url);
   }
 
+  getPokemonsDetails(name:string) {
+    return this.http.get('https://pokeapi.co/api/v2/pokemon/' + name);
+  }
+
   getItems() {
     return this.http.get('https://pokeapi.co/api/v2/item');
   }

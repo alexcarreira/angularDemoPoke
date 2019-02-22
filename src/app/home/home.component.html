@@ -5,7 +5,8 @@
 <div class="list">
   <div class="list-column">
     <ul *ngIf="pokemons">
-      <li class="bubbly-button" [ngClass]="pokemon.clicked ? 'animate' : ''" (click)="clickItem(pokemon)" *ngFor="let pokemon of pokemons">
+      <li class="bubbly-button" [ngClass]="pokemon.clicked ? 'animate' : ''" (click)="clickItem(pokemon)"
+       *ngFor="let pokemon of pokemons" routerLink="/details/{{pokemon.name}}">
         <img [src]="pokemon.photo">
         <p>{{ pokemon.name }}</p>
       </li>
