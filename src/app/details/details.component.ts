@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
 
-  pokemonDetail: any[] = [];
+  pokemonDetail: Array<any> = [];
 
   constructor(private data: DataserviceService,
     private route: ActivatedRoute) { }
