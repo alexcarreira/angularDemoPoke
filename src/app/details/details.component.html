@@ -1,17 +1,13 @@
-<div class="card">
-  <h5 class="card-header">{{pokemonDetail.name}}</h5>
+<div class="card card-body-custom">
+  <h5 class="card-header">
+      <img [src]="pokemonDetail?.sprites?.front_default"
+      [alt]="pokemonDetail.name">
+    {{pokemonDetail.name}}</h5>
   <div class="card-body">
     <div class="row">
-
-      <div clas="col-md-4">
-        <img [src]="pokemonDetail?.sprites?.front_default"
-          [alt]="pokemonDetail.name">
-      </div>
-      <div clas="col-md-8">
-          Details
+      <div clas="col-md-12">
         <div *ngFor="let move of pokemonDetail.moves">
-          <h5 class="card-title">{{move?.move?.name}}</h5>
-          <p class="card-text">{{move?.move?.url}}</p>
+          <p class="card-title">{{move?.move?.name}} : <a target="_blank" [href]="move?.move?.url">move details</a></p>
         </div>
       </div>
     </div>
